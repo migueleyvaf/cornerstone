@@ -69,7 +69,7 @@ header{
 /*banner*/
 #banner{
     padding: 0 50px;
-    background-image: url(/imagenes/kitchentremodel.jpg);
+    background-image: url(./imagenes/kitchentremodel.jpg);
     height: 90vh;
     background-size: cover;
     background-position:bottom;
