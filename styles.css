@@ -1,0 +1,429 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+}
+
+/*header*/
+header{ 
+    height: 100px;
+    color:rgb(0, 0, 0);
+    background:  #375c92;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-compania{
+    display: flex;
+    align-items: center;
+}
+
+.logo-cornerstone{
+    height: 50px;
+
+}
+
+.logo{
+    text-transform: uppercase;
+    color:rgb(253, 253, 253);
+    font-weight: 900; 
+    font-size: 25px;
+    align-items: center;
+}
+
+.menu a{
+    color:rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+    font-weight: 900;
+    font-size: 20px;
+
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 50px;
+    cursor:pointer;
+    display: none; 
+    transition: 0.4s;
+}
+
+.mostrar-menu{
+    order:1; 
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    background:   #1e4c92;
+}
+
+#check{
+    display: none;
+}
+/*banner*/
+#banner{
+    padding: 0 50px;
+    background-image: url(/imagenes/kitchentremodel.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position:bottom;
+}
+#banner::before{
+    content: '';
+    background: rgba(112, 112, 133, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    left:0;
+}
+.contenido-banner{
+    position: relative;
+    color:rgb(252, 253, 253);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3{
+    font-size: 25px;
+    font-weight: 300;
+    padding: 70px 0px;
+    
+}
+.contenido-banner h3 span{
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.boton-empezar{
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid   #375c92;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+.boton-empezar:hover{
+    background:   #375c92;
+
+}
+/*servicios*/
+#Servicios{
+    padding: 0 350px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.tagline{
+    color: #1f66cf;
+    font-weight: 600;
+    font-size: 20px;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+h4{
+    font-size: 60px;
+    height: 60px;
+    width: 350px;
+    display: flex;
+    align-items: flex-end;
+}
+.parrafo{
+    font-size: 20px;
+    height: 100px;
+    width: fit-content;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+.boton-servicios{
+    color:  #1f66cf;
+    font-size: 25px;
+    text-decoration: none;
+    border: 2px solid   #1f66cf;
+    padding: 2px 10px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+.boton-servicios:hover{
+    background:   #1f66cf;
+    color: #fff;
+
+}
+/*carrusel*/
+.contenedor-carrusel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #375c92;
+}
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.carousel-slide {
+    min-width: 100%;
+}
+.carousel-slide img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-button:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/*responsive*/
+@media(max-width: 768px){
+    /*header*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:   #1f66cf;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 70px;
+        font-size: 25px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    
+    .parrafo{
+        font-size: 15px;
+        height: 100px;
+        width: fit-content;
+        text-align: justify;
+    }
+    #Servicios{
+        padding: 0 20px;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    header{
+        padding: 0 20px;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos generales 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Evita el scroll horizontal *
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8em;
+    flex-grow: 1;
+}
+
+/* Menú normal en pantallas grandes 
+nav {
+    display: flex;
+}
+
+.menu {
+    list-style: none;
+    display: flex; /* Muestra el menú en pantallas grandes 
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+}
+
+/* Ícono del menú oculto por defecto 
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+/* Media Query para pantallas pequeñas 
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    .menu-icon {
+        display: block; /* Muestra el ícono del menú en móviles 
+        position: absolute;
+        right: 20px; /* Alinea el ícono a la derecha 
+        top: 20px;
+    }
+
+    nav {
+        display: none; /* Oculta el menú por defecto en móviles 
+        position: absolute; /* Posición absoluta para el menú 
+        top: 60px; /* Alinea el menú debajo del header 
+        right: 0; /* Alinea el menú al lado derecho 
+        background-color: #4CAF50; /* Fondo del menú 
+        width: 200px; /* Ancho del menú 
+        border-radius: 5px; /* Bordes redondeados 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra del menú 
+    }
+
+    .menu.open {
+        display: flex; /* Muestra el menú cuando tiene la clase 'open'         flex-direction: column; /* Alinea los elementos del menú en vertical 
+        padding: 10px; /* Espaciado interno del menú 
+    }
+
+    .menu li {
+        margin: 5px 0; /* Margen vertical entre elementos del menú 
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+}
+    */
